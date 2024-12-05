@@ -1,0 +1,450 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+
+:root {
+    --primary-color:#1c4261;
+    --text-dark: #61819c;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.btn {
+    position: absolute;
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: #dbdce0;
+}
+
+body::after {
+    position: fixed;
+    content: "";
+    height: 100%;
+    width: 0;
+    top: 0;
+    right: 0;
+    background-color: var(--text-dark);
+    z-index: -1;
+
+    animation: body-bg 1s ease-in-out forwards;
+}
+
+@keyframes body-bg {
+    0% {
+        width: 0vw;
+    }
+
+    100% {
+        width: 50vw;
+    }
+}
+
+body::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    font-size: 70rem;
+    font-weight: 200;
+    color: var(--white);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.container {
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+nav {
+    padding-block: 2rem 0;
+    padding-inline: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav__links a {
+    font-weight: 500;
+}
+
+.nav__links .logo {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.nav__left a {
+    color: var(--text-dark);
+}
+
+.nav__right a {
+    color: var(--white);
+}
+
+.nav__links a:hover {
+    color: var(--primary-color);
+}
+
+/* Add new styling for the logo in the center */
+.nav__logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.nav__logo .logo__left {
+    color: #61819c;
+}
+
+.nav__logo .logo__right {
+    color: white;
+}
+ 
+
+/* .letter-s {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40rem;
+    line-height: 40rem;
+    font-weight: 900;
+    color: var(--primary-color);
+} */
+
+.container img {
+    margin-top: 50PX;
+    position: absolute;
+    width: 100%;
+    max-width: 400px;
+    height: 450PX;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.8));
+}
+
+.container h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 10rem;
+    z-index: -1;
+    color: var(--white);
+    letter-spacing: 25px;
+}
+
+.text__left {
+    transform: translate(calc(-50% - 250px), -50%);
+}
+
+.text__right {
+    transform: translate(calc(-50% + 250px), -50%);
+}
+
+
+.container h5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.container h5::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100px;
+    top: 50%;
+}
+
+.feature-1 {
+    color: var(--text-dark);
+    transform: translate(calc(-50% - 300px), calc(-50% - 200px));
+}
+
+.feature-2 {
+    color: var(--white);
+    transform: translate(calc(-50% + 300px), calc(-50% - 200px));
+}
+
+.feature-3 {
+    color: var(--text-dark);
+    transform: translate(calc(-50% - 300px), calc(-50% + 200px));
+}
+
+.feature-4 {
+    color: var(--white);
+    transform: translate(calc(-50% + 300px), calc(-50% + 200px));
+}
+
+.feature-1::after,
+.feature-3::after {
+    right: 0;
+    transform: translate(calc(100% + 40px), -50%);
+    background-color: var(--text-dark);
+}
+
+.feature-2::after,
+.feature-4::after {
+    left: 0;
+    transform: translate(calc(-100% - 40px), -50%);
+    background-color: var(--white);
+}
+
+
+
+@keyframes fade__in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+@media (width > 540px) {}
+
+@media (width > 768px) {}
+
+@media (width > 1024px) {}
+
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Align items to the top */
+    width: 100%;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+/* Left Column - Tagline */
+.tagline {
+    flex: 1;
+    text-align: left;
+    /* Align text to the left */
+    padding-right: 20px;
+    /* Small padding on the right */
+}
+
+.tagline h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.tagline p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Right Column - Signup Form */
+.signup-form {
+    flex: 1;
+    padding-left: 20px;
+    /* Small padding on the left for separation */
+    margin-left: 40px;
+    /* Adding some margin for spacing between columns */
+    box-shadow: #1c4261;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-floating {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-floating input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-floating label {
+    font-size: 1rem;
+    color: #333;
+}
+
+.checkbox label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #61819C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #61819C;
+}
+
+/* Horizontal Line */
+hr.my-4 {
+    width: 100%;
+    margin-top: 20px;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .tagline {
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .signup-form {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 0;
+        margin-left: 0;
+    }
+}
+
+/* Styling for footer */
+.footer {
+    background-color: #61819C;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer__links {
+    margin-top: 10px;
+}
+
+.footer__links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.footer__links a:hover {
+    text-decoration: underline;
+}
+
+/* Our Services Section */
+.services {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.services h2 {
+    color: #1c4261;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.services__cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.service__card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.service__card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px #61819C;
+    /* Blue shadow effect */
+}
+
+.service__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.service__card h3 {
+    color: #1c4261;
+    font-size: 1.6rem;
+    margin: 10px 0;
+}
+
+.service__card p {
+    color: #666;
+    font-size: 1rem;
+}

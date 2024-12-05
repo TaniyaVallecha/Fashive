@@ -6,8 +6,9 @@ This is a modern, responsive, and visually appealing frontend design for a fashi
 
 
 ![image](https://github.com/user-attachments/assets/de4adbc2-0014-4a90-bcdd-ac768690adb4)
-![image](https://github.com/user-attachments/assets/2ea6a2c9-07f1-43d2-b082-29a90fb4967a)
-![image](https://github.com/user-attachments/assets/c9c56927-f94b-4531-b015-b07c7fc7b333)
 
+![image](https://github.com/user-attachments/assets/26013355-f4c3-48b8-9cce-5c5ac565bb61)
+
+![image](https://github.com/user-attachments/assets/7dba9043-0fd0-4298-9c75-db07ad1f3c56)
 
 
